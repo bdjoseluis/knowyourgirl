@@ -1,0 +1,38 @@
+package knowyourgirl;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.Info;
+
+@SpringBootApplication
+public class JoseLuisBotellaDevesaActividad5Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(JoseLuisBotellaDevesaActividad5Application.class, args);
+
+
+	}
+
+	@Bean
+	public OpenAPI customOpenAPI()
+	{
+		return new OpenAPI()
+				.components(new Components())
+				.info(new Info().title("API ACTIVIDAD5")
+						.description("Proyecto de API REST")
+						.contact(new Contact()
+								.name("Jose Luis Botella Devesa")
+								.email("josbotdev@gmail.com")
+								.url("http://localhost:8087/swagger-ui/index.html"))
+						.version("1.0"));
+	}
+
+
+
+
+}
